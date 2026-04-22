@@ -7,15 +7,16 @@
     "icon": "./assets/images/icon.png",
     "scheme": "fhlsco",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.munim.sample",
+      "appleTeamId": "",
       "infoPlist": {
-        "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth for BLE communication",
-        "NSBluetoothPeripheralUsageDescription": "This app uses Bluetooth to create a peripheral device"
-      },
-      "appleTeamId": ""
+        "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth for BLE communication.",
+        "NSBluetoothPeripheralUsageDescription": "This app uses Bluetooth to advertise and connect to BLE devices.",
+        "NSLocalNetworkUsageDescription": "This app uses your local network while developing and connecting to nearby Bluetooth devices.",
+        "UIBackgroundModes": ["bluetooth-central", "bluetooth-peripheral"]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,14 +25,16 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "package": "com.maganankur.FHLSCO",
       "permissions": [
         "android.permission.BLUETOOTH",
         "android.permission.BLUETOOTH_ADMIN",
         "android.permission.BLUETOOTH_ADVERTISE",
-        "android.permission.BLUETOOTH_CONNECT"
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
       ]
     },
     "web": {
@@ -51,7 +54,10 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-font",
+      "expo-image",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
