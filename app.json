@@ -10,12 +10,12 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.maganankur.FHLSCO",
+      "bundleIdentifier": "com.munim.sample",
       "infoPlist": {
         "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth for BLE communication",
         "NSBluetoothPeripheralUsageDescription": "This app uses Bluetooth to create a peripheral device"
       },
-      "appleTeamId": "V9L8X67N42"
+      "appleTeamId": ""
     },
     "android": {
       "adaptiveIcon": {
